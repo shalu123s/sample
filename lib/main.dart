@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:pagination_app/src/screens/login.dart';
 import 'package:pagination_app/src/screens/signup.dart';
 
+import 'src/screens/dashboard.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -13,11 +15,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const LoginScreen(),
+      home: const DashboaedScreen(),
     );
   }
 
