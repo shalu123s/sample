@@ -5,7 +5,7 @@ import 'package:path/path.dart';
 class DatabaseHelper{
 
   final dbName ='localdb';
-   static const table = 'notification_table';
+   static const table = 'user_table';
 
   static const columnId = 'id';
   static const columnUser = 'user';
@@ -32,14 +32,14 @@ class DatabaseHelper{
     );}
 
     static Database? _database;
-  Future<Database?> get database async {
+  Future<Database?> get userdatabase async {
     if (_database != null) return _database;
     _database = await intiDB();
     return _database;
   }
 
 Future<int?>insert(User user)async{
-Database? db =await instance.database;
+Database? db =await instance.userdatabase;
 return await db?.insert(table, {
 columnUser:user.user,
 columnPass:user.password,

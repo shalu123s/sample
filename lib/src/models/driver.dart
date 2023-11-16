@@ -3,14 +3,14 @@ import 'dart:core';
 class Driver {
   String? driverid;
   String? drivername;
-  String? drivercategory;
+  String? vehicletype;
   String? drivernumber;
   String? driverdescription;
 
   Driver({
     this.driverid,
     this.drivername,
-    this.drivercategory,
+    this.vehicletype,
     this.drivernumber,
     this.driverdescription,
   });
@@ -19,7 +19,7 @@ class Driver {
     Driver(
       driverid: json['driverid'],
       drivername: json['drivername'],
-      drivercategory: json['drivercategory'],
+      vehicletype: json['vehicletype'],
       drivernumber: json['drivernumber'],
       driverdescription: json['driverdescription'],
     );
@@ -28,7 +28,7 @@ class Driver {
   Map<String, dynamic> toMap() => {
         'driverid': driverid,
         'drivername': drivername,
-        'drivercategory': drivercategory,
+        'vehicletype': vehicletype,
         'drivernumber': drivernumber,
         'driverdescription': driverdescription,
       };

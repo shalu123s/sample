@@ -239,21 +239,21 @@ late BuildContext _ctx;
 
  Future<int?>onSave(User user)async{
   DatabaseHelper db =DatabaseHelper();
-  var dbUser = await db.database;
+  var dbUser = await db.userdatabase;
   int? res = await dbUser?.insert("User", user.toMap());
     return  res;
  }
 
  Future<int?> deleteUser(User user) async {
     DatabaseHelper db =DatabaseHelper();
-    var dbClient = await db.database;
+    var dbClient = await db.userdatabase;
     int? res = await dbClient?.delete("User");
     return res;
   }
 
    Future<User?> getLogin(String user, String password) async {
         DatabaseHelper db =DatabaseHelper();
-    var dbClient = await db.database;
+    var dbClient = await db.userdatabase;
     var res = await dbClient!.rawQuery("SELECT * FROM user WHERE username = '$user' and password = '$password'");
     
     if (res.isNotEmpty) {
@@ -265,7 +265,7 @@ late BuildContext _ctx;
    Future<List<User>?> getAllUser() async {
             DatabaseHelper db =DatabaseHelper();
 
-    var dbClient = await db.database;
+    var dbClient = await db.userdatabase;
     var res = await dbClient!.query("user");
     
     List<User>? list =
