@@ -3,6 +3,7 @@ import 'package:pagination_app/src/screens/login.dart';
 import 'package:pagination_app/src/screens/signup.dart';
 
 import 'src/screens/dashboard.dart';
+import 'src/screens/drivers.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const DashboaedScreen(),
+      home:  DriverScreen(),
     );
   }
 

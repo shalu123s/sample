@@ -1,4 +1,4 @@
-import 'package:pagination_app/model/user.dart';
+import 'package:pagination_app/src/models/user.dart';
 import 'package:sqflite/sqflite.dart';
 import 'package:path/path.dart';
 
@@ -41,8 +41,8 @@ class DatabaseHelper{
 Future<int?>insert(User user)async{
 Database? db =await instance.userdatabase;
 return await db?.insert(table, {
-columnUser:user.user,
-columnPass:user.password,
+columnUser:user.usrname,
+columnPass:user.usrpass,
 });
 
 }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:pagination_app/model/user.dart';
+import 'package:pagination_app/src/models/user.dart';
+import 'package:pagination_app/src/screens/dashboard.dart';
 import 'package:pagination_app/src/screens/signup.dart';
 import '../helper/blockbutton.dart';
 import '../helper/db_hehper.dart';
@@ -224,7 +225,7 @@ late BuildContext _ctx;
               _isLoading = true;
               _response?.doLogin(_username!, _password!);
               });
-                  Navigator.push(context,MaterialPageRoute(builder: (context) => const SigninScreen()),);
+                  Navigator.push(context,MaterialPageRoute(builder: (context) => const DashboaedScreen()),);
                 }else{
                   _showSnackBar('text');
                 }
